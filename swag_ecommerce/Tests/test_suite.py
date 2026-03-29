@@ -3,6 +3,7 @@ from driver_setup import  get_driver
 from Methods.login_page import LoginPage
 from Methods.cart_page import ShoppingCart
 from Helpers.helpers import login
+import time
 
 
 
@@ -16,17 +17,28 @@ class TestLoginAndCart:
         cls.inventory = ShoppingCart(cls.driver)
 
 
-    def test_username(self):
-        self.login_page.enter_username()
-
+    def test_valid_username(self):
+        self.login_page.enter_valid_username()
         assert self.login_page.get_username_value() == 'standard_user'
 
+    def test_invalid_username(self):
+        self.login_page.enter_invalid_username()
 
-    def test_password(self):
-        self.login_page.enter_password()
+        assert self.login_page.get_username_value() == 'cat'
+        assert "Epic sadface: Username and password do not match any user in this service" in self.login_page.message_container_error()
+
+
+    def test_valid_password(self):
+        self.login_page.enter_valid_password()
 
         assert self.login_page.get_password_value() == 'secret_sauce'
 
+
+    def test_invalid_password(self):
+        self.login_page.enter_invalid_password()
+
+        assert self.login_page.get_password_value() == 'fish'
+        assert "Epic sadface: Username and password do not match any user in this service" in self.login_page.message_container_error()
 
     def test_click_login_button(self):
         login(self.login_page)
