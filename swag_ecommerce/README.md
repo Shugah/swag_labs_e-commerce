@@ -1,44 +1,54 @@
-# Proyecto de Pruebas Automatizadas — Swag Labs 🛍️👜
+🇪🇸 [Español](README_ES.md)
 
-## Descripción
-Este proyecto contiene pruebas automatizadas para la página Swag Labs, una tienda e-commerce de práctica. 
-Las pruebas están desarrolladas en **Python** utilizando **Pytest** y **Selenium WebDriver**, organizadas en **clases y métodos** para mantener una estructura clara, escalable y reutilizable. 
 
----
-## Organización del Código
 
-El proyecto sigue una arquitectura basada en **Page Object Model (POM)**:
+# Automated Testing Project — Swag Labs 🛍️👜
 
-### Clases de Métodos (Methods)
-Contienen las acciones que se realizan sobre los elementos de la interfaz,
-probando el flujo del login y la función de añadir/remover productos del carrito de compra.
+## Description
+This project contains automated tests for the Swag Labs website, a practice e-commerce platform.  
+The tests are developed in **Python** using **Pytest** and **Selenium WebDriver**, organized into **classes and methods** to maintain a clear, scalable, and reusable structure.
 
 ---
 
-### Conjunto de Pruebas (Tests)
-Usan los métodos definidos anteriormente para crear flujos de prueba completos e independientes.
+## Code Organization
 
+The project follows a **Page Object Model (POM)** architecture:
+
+### Methods (Classes)
+Contain the actions performed on UI elements,
+covering the login flow and the functionality of adding/removing products from the shopping cart.
+
+### Test Suite (Tests)
+Use the previously defined methods to create complete and independent test flows.
+
+### Helpers (Support Flows)
+Contain the full login flow to keep the test environment clean and readable.
+
+### Driver (Driver Setup)
+Opens the browser in incognito mode to prevent tests from being affected by pop-ups or browser-related interruptions.
 
 ---
 
-## Requisitos Previos
+## Prerequisites
 
 - Python 3.13
-- Google Chrome Versión 146.0.7680.165 
-- ChromeDriver (misma versión que el navegador)
+- Google Chrome Version 146.0.7680.165  
+- ChromeDriver (same version as the browser)
 - PyCharm
 
 ---
 
-## Instalación del Entorno
+## Installation
 
-- Clona el repositorio:  
+- Clone the repository: https://github.com/Shugah/swag_labs_e-commerce.git
 
-git clone
+- Navigate to the project folder:
 
-cd 
+```bash
+cd swag_labs_e-commerce
+```
 
-## 👩‍💻 Autor
+## 👩‍💻 Author
 
 **Honey Ochoa**  
-Proyecto de Pruebas Automatizadas — Swag Labs 🛍️👜
+Automated Testing Project — Swag Labs 🛍️👜
