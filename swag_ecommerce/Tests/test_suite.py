@@ -20,6 +20,7 @@ class TestLoginAndCart:
     def test_valid_username(self):
         self.login_page.enter_valid_username()
         assert self.login_page.get_username_value() == 'standard_user'
+        assert "Password is required" in self.login_page.message_container_error()
 
     def test_invalid_username(self):
         self.login_page.enter_invalid_username()
@@ -32,7 +33,7 @@ class TestLoginAndCart:
         self.login_page.enter_valid_password()
 
         assert self.login_page.get_password_value() == 'secret_sauce'
-
+        assert 'Username is required' in self.login_page.message_container_error()
 
     def test_invalid_password(self):
         self.login_page.enter_invalid_password()

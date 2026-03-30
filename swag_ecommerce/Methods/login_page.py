@@ -22,6 +22,12 @@ class LoginPage:
 
         username_input.send_keys(self.user)
 
+        username_input_click = self.wait.until(
+            EC.visibility_of_element_located((By.ID, Login.login_button)))
+        username_input_click.click()
+
+
+
 
     def enter_invalid_username(self):
         username_input = self.wait.until(
@@ -67,6 +73,10 @@ class LoginPage:
             EC.visibility_of_element_located((By.ID, Login.password)))
 
         password_input.send_keys(self.password)
+
+        password_input_click = self.wait.until(
+            EC.visibility_of_element_located((By.ID, Login.login_button)))
+        password_input_click.click()
 
     def get_password_value(self):
         password_input = self.driver.find_element(By.ID,Login.password)
