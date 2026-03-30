@@ -1,4 +1,4 @@
-🇺🇸 [English](README.md)
+[English version | Versión en inglés](README.md)
 
 
 # Proyecto de Pruebas Automatizadas — Swag Labs 🛍️👜
@@ -42,7 +42,15 @@ Abre una pestaña en incógnito para evitar que las pruebas se vean obstaculizad
 
 - Clona el repositorio: https://github.com/Shugah/swag_labs_e-commerce.git
 
-- cd: swag_labs_e-commerce
+```bash
+cd swag_labs_e-commerce
+```
+
+- Instalar dependencias:  
+  pip install -r requirements.txt
+
+- Ejecutar las pruebas:  
+  pytest
 
 ## 👩‍💻 Autor
 

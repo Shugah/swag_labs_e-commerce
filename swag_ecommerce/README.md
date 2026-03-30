@@ -1,4 +1,4 @@
-🇪🇸 [Español](README_ES.md)
+[ Spanish version | Versión en español](README_ES.md)
 
 
 
@@ -47,6 +47,9 @@ Opens the browser in incognito mode to prevent tests from being affected by pop-
 ```bash
 cd swag_labs_e-commerce
 ```
+- Install dependencies:
+   pip install -r requirements.txt
+- Run tests: pytest
 
 ## 👩‍💻 Author
 
