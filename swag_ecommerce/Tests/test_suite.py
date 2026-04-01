@@ -26,8 +26,10 @@ class TestLoginAndCart:
         self.login_page.enter_invalid_username()
 
         assert self.login_page.get_username_value() == 'cat'
-        assert "Epic sadface: Username and password do not match any user in this service" in self.login_page.message_container_error()
-
+        assert (
+            "Epic sadface: Username and password do not match any user in this service"
+            in self.login_page.message_container_error()
+)
 
     def test_valid_password(self):
         self.login_page.enter_valid_password()
